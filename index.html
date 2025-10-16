@@ -1,50 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CrowdSeeds VC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CrowdSeeds Venture Capital</title>
 <style>
-body {
-font-family: 'Segoe UI', sans-serif;
+* {
 margin: 0;
 padding: 0;
-background: #f5f5f5;
+box-sizing: border-box;
+}
+
+html, body {
+height: 100%;
+font-family: 'Segoe UI', sans-serif;
+background-color: #006A4E; /* UNT green */
+color: white;
+}
+
+#splash {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #006A4E;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+z-index: 9999;
+}
+
+#splash img {
+width: 240px;
+max-width: 80%;
+margin-bottom: 1.5rem;
+}
+
+#splash h1 {
+font-size: 1.5rem;
+font-weight: 400;
+text-align: center;
+color: #FFD700; /* Gold */
+}
+
+#main {
+display: none;
+padding: 2rem;
+background: white;
 color: #222;
 text-align: center;
 }
-header {
-background-color: #006A4E; /* UNT Green */
+
+body.loaded #splash {
+display: none;
+}
+
+body.loaded #main {
+display: block;
+}
+
+button {
+background-color: #006A4E;
 color: white;
-padding: 2rem;
+padding: 0.75rem 1.25rem;
+border: none;
+font-size: 1rem;
+cursor: pointer;
+margin-top: 1rem;
 }
-h1 {
-margin: 0;
-}
-main {
-padding: 2rem;
-}
-.highlight {
-color: gold;
-font-weight: bold;
+
+button:hover {
+background-color: #004D3C;
 }
 </style>
 </head>
 <body>
-<header>
-<h1>🌱 CrowdSeeds Venture Capital</h1>
-<p class="highlight">Planting the Future of Fractional Wealth</p>
-</header>
-<main>
-<p>This is the official front-end landing page for <strong>CrowdSeeds VC</strong>.</p>
-<p>We're an ethical, community-driven private financial ecosystem empowering founders and everyday investors.</p>
-<p>Website coming soon. Stay tuned.</p>
-</main>
+<div id="splash">
+<img src="logo.png" alt="CrowdSeeds Logo">
+<h1>Planting the Future of Fractional Wealth</h1>
+</div>
+
+<div id="main">
+<h2>Welcome to CrowdSeeds VC</h2>
+<p>We help launch community-powered startups with $1 at a time.</p>
+<button onclick="alert('Coming soon...')">See How It Works</button>
+</div>
+
+<script>
+window.addEventListener('load', () => {
+setTimeout(() => {
+document.body.classList.add('loaded');
+}, 1800); // show splash for ~2 seconds
+});
+</script>
 </body>
 </html>
 
-
-J. Timothy Lopez Sr. (CEO)
-Vertex DynamicsAi Corporation
 
