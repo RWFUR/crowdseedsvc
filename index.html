@@ -97,5 +97,53 @@ document.body.classList.add('loaded');
 </script>
 </body>
 </html>
+color: #222;
+text-align: center;
+}
+
+body.loaded #splash {
+display: none;
+}
+
+body.loaded #main {
+display: block;
+}
+
+button {
+background-color: #006A4E;
+color: white;
+padding: 0.75rem 1.25rem;
+border: none;
+font-size: 1rem;
+cursor: pointer;
+margin-top: 1rem;
+}
+
+button:hover {
+background-color: #004D3C;
+}
+</style>
+</head>
+<body>
+<div id="splash">
+<img src="logo.png" alt="CrowdSeeds Logo">
+<h1>Planting the Future of Fractional Wealth</h1>
+</div>
+
+<div id="main">
+<h2>Welcome to CrowdSeeds VC</h2>
+<p>We help launch community-powered startups with $1 at a time.</p>
+<button onclick="alert('Coming soon...')">See How It Works</button>
+</div>
+
+<script>
+window.addEventListener('load', () => {
+setTimeout(() => {
+document.body.classList.add('loaded');
+}, 1800); // show splash for ~2 seconds
+});
+</script>
+</body>
+</html>
 
 
